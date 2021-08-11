@@ -17,9 +17,10 @@ public class Player : MonoBehaviour
    }
    private void Update() {
        float movement = Input.GetAxis("Horizontal");
+       
        _rigidbody.velocity = new Vector2(movement,0) * _speed;
        bool _isOnEarth = Physics2D.OverlapCircle(_checkPoint.position,_range, _layer);
-       
+       Debug.Log(_isOnEarth);
        if (Input.GetKeyDown(KeyCode.Space) && _isOnEarth ==true)
        {
           Jump();
@@ -34,7 +35,7 @@ public class Player : MonoBehaviour
 
 
    }
-   private void Jump() => _rigidbody.AddForce(Vector2.up*_jumpforse);
+   private void Jump() => _rigidbody.velocity = Vector2.up*_jumpforse;
    
    private void ChangeDirection() {
        float _turn = _isTurned ?_sizes.x : -_sizes.x;

@@ -504,8 +504,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 2112209533}
   _speed: 5
-  _jumpforse: 5000
-  _checkPoint: {fileID: 1716708847}
+  _jumpforse: 100
+  _checkPoint: {fileID: 1825122841}
   _layer:
     serializedVersion: 2
     m_Bits: 256
